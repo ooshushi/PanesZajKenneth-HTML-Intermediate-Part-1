@@ -35,7 +35,7 @@
         input[type="text"],
         input[type="email"],
         input[type="password"] {
-            width: 100%;
+            width: 90%;
             padding: 10px;
             margin-top: 5px;
             margin-bottom: 10px;
@@ -62,8 +62,12 @@
         <h1>Sign Up</h1>
         <form action="#" method="post">
             <div class="form-group">
-                <label for="fullname">Full Name:</label>
-                <input type="text" id="fullname" name="fullname">
+                <label for="lastname">Last Name:</label>
+                <input type="text" id="lastname" name="lastname">
+                <label for="firstname">First Name:</label>
+                <input type="text" id="firstname" name="firstname">
+                <label for="middlename">Middle Name:</label>
+                <input type="text" id="middlename" name="middlename">
             </div>
             <div class="form-group">
                 <label for="email">Email:</label>
@@ -71,8 +75,8 @@
             </div>
             <div class="form-group">
                 <label for="password">Password:</label>
-                <input type="password" id="password" name="password">
-                <small>Password must contain at least 8 characters, including one uppercase letter, one lowercase letter, one number, and one special character (!@#$%^&*).</small>
+                <input type="password" id="password" name="password" pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&*]).{8,}$">
+                <small>Password must contain at least 8 characters, has an uppercase letter, a lowercase letter, a number, and a special character (!@#$%^&*).</small>
             </div>
             <button type="submit">Sign Up</button>
         </form>
